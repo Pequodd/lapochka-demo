@@ -1,0 +1,54 @@
+:root{
+  /* ── base palette ───────────────────────────── */
+  --coral-700:#D6381E;
+  --coral-600:#FE6147;
+  --coral-500:#FA8669;
+  --peach-400:#FEC7B2;
+  --blush-200:#FFDFD7;
+  --blush-100:#FFEDE8;
+  --white:#FFFFFF;
+  --ink-900:#202020;
+  --ink-700:#6F3432;
+  --ink-500:#9A7B74;
+
+  /* ── product lines ──────────────────────────── */
+  --classic-bg:var(--blush-200);
+  --classic-ink:var(--coral-700);
+  --water-bg:#DAEAF0;
+  --water-ink:#4E8CA8;
+  --retro-bg:#FBD6CE;
+  --retro-ink:#B0503F;
+  --collab-bg:#D1C6E8;
+  --collab-ink:#6A54A3;
+
+  /* ── semantic ───────────────────────────────── */
+  --ok:#2E7D52;
+  --error:#C43A2B;
+  --warning:#E8A317;
+
+  /* ── aliases: surfaces ──────────────────────── */
+  --surface-page:var(--white);
+  --surface-section:var(--peach-400);      /* primary section surface */
+  --surface-catalogue:var(--blush-100);    /* catalogue page bg, product image bg */
+  --surface-card:var(--white);
+  --surface-card-underlay:var(--blush-200);
+  --surface-image:var(--blush-100);
+  --surface-header-scrolled:var(--blush-100);
+
+  /* ── aliases: text ──────────────────────────── */
+  --text-body:var(--ink-900);
+  --text-secondary:var(--ink-700);
+  --text-meta:var(--ink-500);
+  --text-display:var(--coral-600);         /* ONLY at >=24px/700 */
+  --text-functional:var(--coral-700);      /* accents below 24px, prices */
+  --text-on-fill:var(--white);
+
+  /* ── aliases: interactive ───────────────────── */
+  --fill-primary:var(--coral-700);
+  --fill-primary-hover:var(--coral-600);
+  --fill-primary-disabled:var(--peach-400);
+  --border-strong:var(--coral-600);
+  --border-soft:var(--peach-400);
+  --border-divider:var(--blush-200);
+  --focus-ring:var(--coral-600);
+}

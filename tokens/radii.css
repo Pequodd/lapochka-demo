@@ -1,0 +1,6 @@
+:root{
+  --radius-sm:8px;    /* inputs, small badges */
+  --radius-md:20px;   /* product card */
+  --radius-lg:30px;   /* large blocks + images — the brand's native radius */
+  --radius-pill:999px;/* buttons, chips, stepper */
+}

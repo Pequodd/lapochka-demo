@@ -1,0 +1,17 @@
+:root{
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;
+  --space-8:32px;--space-12:48px;--space-16:64px;--space-24:96px;--space-32:128px;
+
+  /* rhythm */
+  --gap-section:128px;   /* between sections */
+  --gap-inner:96px;      /* within a section */
+  --gap-block:48px;      /* between blocks */
+  --gap-card:16px;       /* inside a card */
+
+  /* grid */
+  --page-max:1440px;
+  --content-max:1200px;
+  --page-margin:120px;
+  --grid-columns:12; /* @kind other */
+  --grid-gutter:24px;
+}

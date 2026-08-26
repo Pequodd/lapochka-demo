@@ -1,0 +1,36 @@
+<!-- @dsCard group="Components" viewport="700x480" name="Product — card, pack selector, accordion" subtitle="product card states, pack maths, detail accordion" -->
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:24px;background:var(--blush-100);font-family:var(--font-core)}@keyframes lp-spin{to{transform:rotate(360deg)}}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.lbl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-500);margin:0 0 8px}.pane{background:var(--white);border-radius:var(--radius-lg);padding:24px;margin-top:24px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { ProductCard, PackSelector, Accordion } = window.LapochkaDesignSystem_c28f60;
+function Demo(){
+  const [q,setQ]=React.useState(2); const [pack,setPack]=React.useState("6");
+  return (<div>
+    <p className="lbl">product card · default / в корзине / со скидкой / нет в наличии</p>
+    <div className="grid">
+      <ProductCard name="грейпфрут + лимон" image="../../assets/cans/grapefruit-lemon.png" price={149} badge="hit"/>
+      <ProductCard name="персик" image="../../assets/cans/peach-verbena.png" price={149} quantity={q} onQuantityChange={setQ}/>
+      <ProductCard name="тархун" image="../../assets/cans/tech-collab.png" line="retro" price={139} oldPrice={169} badge="sale" meta="330 мл · без сахара"/>
+      <ProductCard name="дыня + мята" image="../../assets/cans/fizzy-rose.png" price={149} outOfStock/>
+    </div>
+    <div className="pane">
+      <p className="lbl">pack selector</p>
+      <PackSelector value={pack} onChange={setPack} options={[
+        {id:"1",label:"1 банка",perCan:149},
+        {id:"6",label:"6 банок",perCan:133,saving:"−11 %"},
+        {id:"12",label:"12 банок",perCan:124,saving:"−17 %"}]}/>
+      <p className="lbl" style={{marginTop:24}}>accordion</p>
+      <Accordion items={[
+        {title:"состав",content:"вода питьевая, сок грейпфрута, сок лимона, экстракт стевии, натуральный ароматизатор, диоксид углерода"},
+        {title:"пищевая ценность",content:"12 ккал на 100 мл · углеводы 2,9 г · сахар 0 г"},
+        {title:"доставка и оплата",content:"доставим завтра по Москве · бесплатно от 1500 ₽ · самовывоз из пункта выдачи"}]}/>
+    </div>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

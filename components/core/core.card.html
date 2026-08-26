@@ -1,0 +1,27 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Core — button, badge, chip, stepper" subtitle="pill button levels, status + line badges, filter chips, stepper" -->
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:24px;background:var(--white);font-family:var(--font-core)}@keyframes lp-spin{to{transform:rotate(360deg)}}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:20px}.lbl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-500);margin:0 0 8px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { Button, Badge, Chip, Stepper } = window.LapochkaDesignSystem_c28f60;
+function Demo(){
+  const [q,setQ]=React.useState(2);
+  return (<div>
+    <p className="lbl">button · primary / secondary / tertiary</p>
+    <div className="row"><Button>в корзину</Button><Button variant="secondary">все вкусы</Button><Button variant="tertiary">показать ещё</Button><Button size="sm">собрать набор</Button></div>
+    <p className="lbl">button · disabled / loading</p>
+    <div className="row"><Button disabled>нет в наличии</Button><Button variant="secondary" disabled>скоро вернётся</Button><Button loading>оформить</Button><Button variant="secondary" loading>обновляем</Button></div>
+    <p className="lbl">badge</p>
+    <div className="row"><Badge tone="new"/><Badge tone="hit"/><Badge tone="sale"/><Badge tone="soon"/><Badge tone="classic"/><Badge tone="retro"/><Badge tone="water"/><Badge tone="collab"/></div>
+    <p className="lbl">chip · default / selected / line-coloured</p>
+    <div className="row"><Chip selected>все</Chip><Chip line="classic" count={10}>классика</Chip><Chip selected line="retro" count={3}>ретро</Chip><Chip selected line="water" count={2}>water</Chip><Chip selected line="collab" count={3}>коллабы</Chip><Chip>без кофеина</Chip><Chip>новинки</Chip><Chip>со скидкой</Chip></div>
+    <p className="lbl">stepper</p>
+    <div className="row"><Stepper value={q} onChange={setQ}/><Stepper value={1}/><Stepper value={12} size="sm"/></div>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

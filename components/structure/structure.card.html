@@ -1,0 +1,18 @@
+<!-- @dsCard group="Components" viewport="700x400" name="Structure — wave divider, marquee" subtitle="four wave variants and the running brand band" -->
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;background:var(--white);font-family:var(--font-core)}@keyframes lp-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}.lp-marquee:hover>div{animation-play-state:paused}.lbl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-500);margin:12px 24px 4px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { WaveDivider, Marquee } = window.LapochkaDesignSystem_c28f60;
+ReactDOM.createRoot(document.getElementById('root')).render(<div>
+  <p className="lbl">wave 1 · peach → white</p><WaveDivider variant={1} above="var(--peach-400)" below="var(--white)" height={70}/>
+  <p className="lbl">wave 2 · white → blush-100</p><WaveDivider variant={2} above="var(--white)" below="var(--blush-100)" height={70}/>
+  <p className="lbl">wave 3 · blush-100 → water</p><WaveDivider variant={3} above="var(--blush-100)" below="var(--water-bg)" height={70}/>
+  <p className="lbl">wave 4 · water → peach, flipped</p><WaveDivider variant={4} flip above="var(--water-bg)" below="var(--peach-400)" height={70}/>
+  <Marquee size={56} height={84} background="var(--peach-400)" color="var(--coral-600)"/>
+</div>);
+</script></body></html>
